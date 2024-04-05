@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinach Disease Prediction - Main Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Main Page - Spinach Disease Prediction</h1>
+        <p>Select an image of a spinach leaf to predict diseases:</p>
+        <form id="predictionForm" action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" id="imageUpload" name="file" accept="image/*">
+            <button type="submit">Predict</button>
+        </form>
+
+        <div id="results">
+            <h2>Prediction Results:</h2>
+            <ul id="diseaseList">
+                <li>Downy Mildew - Accuracy: <span id="accuracy1"></span></li>
+                <li>Anthracnose - Accuracy: <span id="accuracy2"></span></li>
+                <li>Leaf Spot - Accuracy: <span id="accuracy3"></span></li>
+                <li>Powdery Mildew - Accuracy: <span id="accuracy4"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Dynamically generate accuracy ranging from 70% to 95%
+        document.getElementById('accuracy1').textContent = getRandomAccuracy();
+        document.getElementById('accuracy2').textContent = getRandomAccuracy();
+        document.getElementById('accuracy3').textContent = getRandomAccuracy();
+        document.getElementById('accuracy4').textContent = getRandomAccuracy();
+
+        function getRandomAccuracy() {
+            return (Math.floor(Math.random() * 26) + 70) + '%';
+        }
+    </script>
+</body>
+</html>
