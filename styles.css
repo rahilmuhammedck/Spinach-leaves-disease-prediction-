@@ -1,31 +1,40 @@
-body {
+/* Reset default margin and padding */
+body, h1, p, ul {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Light gray background */
 }
 
+/* Set default font family */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container styles */
 .container {
     width: 80%;
     margin: 50px auto;
     text-align: center;
 }
 
+/* Heading styles */
 h1 {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
+/* Paragraph styles */
 p {
     font-size: 1.2em;
     margin-bottom: 30px;
 }
 
+/* File upload input styles */
 input[type="file"] {
     padding: 10px;
     font-size: 1em;
 }
 
+/* Button styles */
 button {
     padding: 10px 20px;
     font-size: 1em;
@@ -40,8 +49,10 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* Results section styles */
 #results {
     text-align: left;
+    margin-top: 30px;
 }
 
 #results ul {
