@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinach Disease Prediction - Result Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Results</h1>
+        <div id="results">
+            <!-- Results will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script>
+        function displayResults() {
+            var resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = ''; // Clear previous results
+
+            var ul = document.createElement('ul');
+
+            // Demo result
+            var demoResult = generateDemoResult();
+            demoResult.forEach(function (result) {
+                var li = document.createElement('li');
+                li.textContent = result.disease + ' - Accuracy: ' + result.accuracy;
+                ul.appendChild(li);
+            });
+
+            resultsDiv.appendChild(ul);
+        }
+
+        // Function to generate demo result
+        function generateDemoResult() {
+            var diseases = ["Downy Mildew", "Anthracnose", "Leaf Spot", "Powdery Mildew"];
+            var results = [];
+
+            diseases.forEach(function(disease) {
+                var accuracy = Math.floor(Math.random() * 26) + 70; // Random accuracy between 70 and 95
+                results.push({ disease: disease, accuracy: accuracy + "%" });
+            });
+
+            return results;
+        }
+
+        // Call displayResults when the page loads
+        window.onload = displayResults;
+    </script>
+</body>
+</html>
