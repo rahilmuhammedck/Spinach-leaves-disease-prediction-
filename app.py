@@ -5,12 +5,12 @@ app = Flask(__name__)
 # Route for the welcome page (first page)
 @app.route('/')
 def welcome_page():
-    return render_template('welcome-page.html')
+    return render_template('welcome.html')
 
 # Route for the main page
 @app.route('/main-page')
 def main_page():
-    return render_template('main-page.html')
+    return render_template('main_page.html')
 
 # Route for the result page
 @app.route('/result-page')
