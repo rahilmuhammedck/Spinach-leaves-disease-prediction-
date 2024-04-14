@@ -1,45 +1,68 @@
 
 
-# Spinach Disease Prediction Web App
+# Spinach Leaves Disease Prediction App File Structure
 
-This web application predicts diseases in spinach leaves based on uploaded images. It is implemented using Flask, a Python web framework.
+This Flask application is structured as follows:
 
-## Installation
+```
+flask_app/
+│
+├── static/
+│   ├── css/
+│   │   ├── styles.css
+│   │   └── welcome.css
+│   └── images/
+│       ├── background.jpg
+│       ├── spinach1.jpg
+│       └── spinach2.jpg
+│
+├── templates/
+│   ├── main-page.html
+│   ├── result-page.html
+│   └── welcome-page.html
+│
+├── app.py
+└── README.md
+```
 
-1. Clone the repository:
-    ```bash
-    git clone <repository_url>
-    ```
+## Directory Structure
 
-2. Install the required dependencies using pip:
-    ```bash
-    pip install -r requirements.txt
-    ```
+- **static/**: Contains static files such as CSS stylesheets and images.
+  - **css/**: Contains CSS files for styling.
+    - **styles.css**: CSS file for styling the main and result pages.
+    - **welcome.css**: CSS file for styling the welcome page.
+  - **images/**: Contains image files used in the application.
+    - **background.jpg**: Background image for pages.
+    - **spinach1.jpg**, **spinach2.jpg**: Images for displaying spinach leaves.
+  
+- **templates/**: Contains HTML templates.
+  - **main-page.html**: HTML template for the main page.
+  - **result-page.html**: HTML template for the result page.
+  - **welcome-page.html**: HTML template for the welcome page.
 
-3. Run the Flask app:
-    ```bash
-    python app.py
-    ```
+- **app.py**: Flask application file containing routes and logic.
 
 ## Usage
 
-1. Access the main page by navigating to `http://localhost:5000/main-page` in your web browser.
+To run the Flask app:
 
-2. Select an image of a spinach leaf and click the "Predict" button.
+1. Make sure you have Flask installed. If not, install it using pip:
 
-3. You will be redirected to the result page (`/result-page`) where the predicted diseases and their accuracies will be displayed.
+    ```
+    pip install Flask
+    ```
 
-## Files
+2. Run the Flask app by executing the `app.py` file:
 
-- `app.py`: Flask application file containing routes and logic.
-- `main-page.html`: HTML template for the main page where users upload images.
-- `result-page.html`: HTML template for the result page where prediction results are displayed.
-- `styles.css`: CSS file for styling the HTML templates.
-- `static/`: Directory containing static files such as images.
-- `templates/`: Directory containing HTML templates.
+    ```
+    python app.py
+    ```
 
-## Dependencies
+3. Access the application in your web browser by navigating to `http://localhost:5000`.
 
-- Flask
-- Other dependencies listed in `requirements.txt`
+## Notes
 
+- Adjust the file names and paths as needed to match your project structure.
+- Customize the HTML templates, CSS files, and Flask routes according to your requirements.
+
+--- 
