@@ -1,0 +1,67 @@
+/* Reset default margin and padding */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set default font family */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Background image styles */
+.background-image {
+    background-image: url('welcome_background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keep background fixed */
+    height: 100vh;
+}
+
+/* Container styles */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Image container styles */
+.image-container {
+    margin-top: 50px;
+}
+
+/* Spinach image styles */
+.spinach-image {
+    width: 200px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
